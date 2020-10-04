@@ -47,7 +47,7 @@ public class ParameterisedTesting {
 	public void testEmail() {
 	UserRegistrationMain user = new UserRegistrationMain();
 	try {
-	boolean result = user.emailValidator(this.emailSample);
+	boolean result = user.emailValidator.validate(this.emailSample);
 	Assert.assertEquals(this.expectedResult, result);
 	}catch(UserRegistrationException e) {
 		Assert.assertEquals("Please enter proper email", e.getMessage());
